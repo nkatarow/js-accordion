@@ -1,6 +1,6 @@
 /*
 
-    FILE: NAMESPACE.ACCORDION.JS
+    FILE: app.accordion.js
     DESCRIPTION: If you can't tell by the name, I feel sorry for you son...
     AUTHOR(S): Nick Katarow
 

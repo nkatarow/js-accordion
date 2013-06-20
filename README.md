@@ -1,18 +1,9 @@
-js-accordion
+Accordion.js
 ============
-**Write a description, dude.**
+**Basic accordion without any extra options.**
+
+Switches classnames for CSS3 animations, determines height of content within folds and changes visual indication of state. 
 
 ###Author  
 Nick Katarow (<http://github.com/nkatarow>)  
 
-###Status
-**DO NOT USE YET**
-
-###To Do
-- Link Files
-- Use Generic Content
-- Clean Markup
-- Add Entypo Font (or not)
-- Add jQuery
-- Make better notes
-- Define dependencies

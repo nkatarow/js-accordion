@@ -1,6 +1,6 @@
 /*
 
-    FILE: NAMESPACE.JS
+    FILE: app.main.js
     DESCRIPTION: Basic App functions and config
     AUTHOR(S): Nick Katarow
 
@@ -17,7 +17,7 @@ $(document).ready(function(){
 }),
 
 NAMESPACE.init = function () {
-        // If accordion exists, grab the accordion script
+    // If accordion exists, grab the accordion script
     if ($('.accordion').length) {
         NAMESPACE.accordions = [];
 
@@ -25,12 +25,4 @@ NAMESPACE.init = function () {
             NAMESPACE.accordions.push(new NAMESPACE.Accordion($(accordion).find('li .trigger')));
         });
     }
-
-    // if ($('.accordion.checkbox').length) {
-    //     NAMESPACE.checkboxLists = [];
-
-    //     $('.accordion.checkbox').each(function (index, checkboxList) {
-    //         NAMESPACE.checkboxLists.push(new NAMESPACE.Checklist(checkboxList));
-    //     });
-    // }
 };
