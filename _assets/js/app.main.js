@@ -1,31 +1,36 @@
 /*
 
-    FILE: CRFT.JS
+    FILE: NAMESPACE.JS
     DESCRIPTION: Basic App functions and config
     AUTHOR(S): Nick Katarow
 
+    DEPENDENCIES:
+    - jQuery 1.9.1
+
     TO DO:
-    - Compare use of head.js with another similar library
 
 */
+var NAMESPACE = window.NAMESPACE || {};
 
-var CRFT = window.CRFT || {};
+$(document).ready(function(){
+    NAMESPACE.init();
+}),
 
-CRFT.init = function () {
+NAMESPACE.init = function () {
         // If accordion exists, grab the accordion script
     if ($('.accordion').length) {
-        CRFT.accordions = [];
+        NAMESPACE.accordions = [];
 
         $('.accordion').each(function (index, accordion) {
-            CRFT.accordions.push(new CRFT.Accordion($(accordion).find('li .trigger')));
+            NAMESPACE.accordions.push(new NAMESPACE.Accordion($(accordion).find('li .trigger')));
         });
     }
 
-    if ($('.accordion.checkbox').length) {
-        CRFT.checkboxLists = [];
+    // if ($('.accordion.checkbox').length) {
+    //     NAMESPACE.checkboxLists = [];
 
-        $('.accordion.checkbox').each(function (index, checkboxList) {
-            CRFT.checkboxLists.push(new CRFT.Checklist(checkboxList));
-        });
-    }
+    //     $('.accordion.checkbox').each(function (index, checkboxList) {
+    //         NAMESPACE.checkboxLists.push(new NAMESPACE.Checklist(checkboxList));
+    //     });
+    // }
 };

@@ -1,15 +1,20 @@
 /*
 
-    FILE: CRFT.ACCORDION.JS
+    FILE: NAMESPACE.ACCORDION.JS
     DESCRIPTION: If you can't tell by the name, I feel sorry for you son...
     AUTHOR(S): Nick Katarow
 
+    DEPENDENCIES:
+    - jQuery 1.9.1
+    - app.main.js
+
     TO DO:
+
 */
 
-var CRFT = window.CRFT || {};
+var NAMESPACE = window.NAMESPACE || {};
 
-CRFT.Accordion = function (triggers) {
+NAMESPACE.Accordion = function (triggers) {
     var self = this;
 
     // Elements
@@ -26,7 +31,7 @@ CRFT.Accordion = function (triggers) {
     });
 }; // End: accordion
 
-CRFT.Accordion.prototype.detectStatus = function (clickedLink) {
+NAMESPACE.Accordion.prototype.detectStatus = function (clickedLink) {
     // Determine if any are open, which to open and which to close
     var self = this;
 
@@ -41,7 +46,7 @@ CRFT.Accordion.prototype.detectStatus = function (clickedLink) {
     }
 }; //End: detectStatus
 
-CRFT.Accordion.prototype.openFold = function (clickedLink) {
+NAMESPACE.Accordion.prototype.openFold = function (clickedLink) {
     // Opens the content div
     var self = this,
         content = clickedLink.children('.content');
@@ -50,11 +55,11 @@ CRFT.Accordion.prototype.openFold = function (clickedLink) {
 
     content.css('max-height', contentHeight + 50); //adding an extra 50 just to make up for paragraph margin
     clickedLink.addClass('open');
-    stateIcon.empty().append('&#10134;'); //add "-" icon
+    stateIcon.empty().append('-'); //add "-" icon
     self.$isOpen = clickedLink;
 }; //End openFold
 
-CRFT.Accordion.prototype.closeFold = function (clickedLink) {
+NAMESPACE.Accordion.prototype.closeFold = function (clickedLink) {
     // Closes the content div
     var self = this,
         content = clickedLink.children('.content');
@@ -62,6 +67,6 @@ CRFT.Accordion.prototype.closeFold = function (clickedLink) {
 
     content.css('max-height', '0');
     clickedLink.removeClass('open');
-    stateIcon.empty().append('&#10133;'); //add "+" icon back in
+    stateIcon.empty().append('+'); //add "+" icon back in
     self.$isOpen = null;
 }; // End closeFold
