@@ -7,3 +7,5 @@ Switches classnames for CSS3 animations, determines height of content within fol
 ###Author  
 Nick Katarow (<http://github.com/nkatarow>)  
 
+###Dependencies
+- jQuery 1.9.1
